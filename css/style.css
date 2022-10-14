@@ -4,6 +4,7 @@ html{
 body{
 	font-family: Overpass;
 	font-size: 18px;
+	position: relative;
 	
 }
 [class*="__container"]{
@@ -51,8 +52,8 @@ body{
 	color: #070707;
 }
 .header-burger{
-	display: none;
-	margin: 0 auto;
+		opacity: 0;
+		visibility: hidden;
 	}
 
 /* ===================================================== */
@@ -99,7 +100,7 @@ body{
 /* TABLET */
 @media (max-width: 980px) {
 	[class*="__container"]{
-		width: 750px;
+		min-width: 750px;
 
 	}
 }
@@ -108,11 +109,15 @@ body{
 
 	.header-burger{
 	position: fixed;
-	top: 10px;
-	left: 50px;
-	font-size: 30px;
+	top: 15px;
+	right: 40px;
 	z-index: 12;
-
+	visibility: visible;
+	opacity: 1;
+	}
+	.header-burger img{
+		width: 60px;
+		height: 60px;
 	}
 
 
@@ -122,17 +127,25 @@ body{
 		width: 100%;
 		height: 100%;
 		position: fixed;
-		top: -10000px;
+		opacity: 0;
 		left: 0;
 		z-index: 4;
+		transition: all ease 0.15s;
+	}
+	.header-menu.open-menu{
+		opacity: 1;
 	}
 	.header_links{
 		display: flex;
 		flex-direction: column;
 		position: relative;
 		z-index: 5;
-		margin-top: 40px;
-		top: -10000px;
+		opacity: 0;
+		transition: all ease 0.15s;
+	}
+	.header_links.open-links{
+		top: 90px;
+		opacity: 1;
 	}
 	.header_links a{
 		font-size: 40px;
