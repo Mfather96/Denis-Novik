@@ -119,6 +119,7 @@ body{
 		visibility: visible;
 		display: block;
 		margin: 0 auto;
+		width: 100%;
 	}
 	.denis-novik_info{
 		display: flex;
@@ -131,7 +132,7 @@ body{
 		margin-top: 0px;
 		margin-bottom: 10px;
 		text-align: center;
-		font-size: 20px;
+		font-size: 25px;
 		min-width: 190px;
 	}
 	.denis-novik-lang{	
@@ -235,13 +236,27 @@ transition: all ease 1s;
 	margin-bottom: 17px;
 }
 .about-me-items{
-	width: 485px;
+	max-width: 485px;
 	margin: 0 auto;
 }
 .about-me-items p{
 	font-size: 18px;
  	line-height: 22px;
 	margin-bottom: 30px;		
+}
+@media (max-width: 513.98px){
+	.about-me-items{
+		max-width: 60%;
+		
+	}
+	.about-me-items p{
+		font-size: 30px;
+		line-height: 40px;
+		margin-bottom: 20px;
+	}
+	.about-me-title{
+		font-size: 55px;
+	}
 }
 
 /* ========================================================================================== */
@@ -296,6 +311,9 @@ transition: all ease 1s;
 .card-rating img{
 	margin: 0px 4px;
 }
+.card-rating img:hover{
+	background: yellow;
+}
 .card-rating{
 	margin-bottom: 110px;
 
@@ -303,7 +321,30 @@ transition: all ease 1s;
 .card-star{
 	margin-bottom: 110px;
 }
-								
+@media (max-width: 513.98px){
+	.skills-title{
+		font-size: 85px;
+		margin-bottom: 35px;
+	}
+	.skills-text{
+		font-size: 32px;
+		margin-bottom: 220px;
+	}
+	.skills-lower{
+		display: flex;
+		flex-direction: column;
+	}	
+	.skills-card{
+		transform: scale(2);
+		margin-bottom: 140px;
+	}
+	.card-logo{
+		margin-bottom: 5px;
+	}
+	.card-name-program{
+		margin-bottom: 2px;
+	}
+}
 
 /* ====================================================================================== */
 
