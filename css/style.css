@@ -141,15 +141,19 @@ body{
 		position: relative;
 		z-index: 5;
 		opacity: 0;
-		transition: all ease 0.15s;
+		top: 90px;
+		transition: opacity ease 0.15s;
 	}
 	.header_links.open-links{
-		top: 90px;
 		opacity: 1;
 	}
 	.header_links a{
 		font-size: 40px;
 		margin-top: 5px;
+
+	}
+	.header_links a:active{
+		background: none;
 	}
 }
 
